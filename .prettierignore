@@ -1,0 +1,13 @@
+# Nuxt specific
+.nuxt/
+dist/
+node_modules/
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Other generated files or specific files you don't want formatted
+# .env
+# coverage/
