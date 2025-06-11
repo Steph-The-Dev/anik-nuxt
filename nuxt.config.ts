@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/ui',
+    'v-gsap-nuxt',
   ],
   css: ['~/assets/css/main.css'],
   image: {
