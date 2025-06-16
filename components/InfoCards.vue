@@ -33,17 +33,19 @@ const cards: Card[] = [
 </script>
 
 <template>
-  <div class="card-grid-container">
-    <!-- We loop over the 'cards' array with v-for -->
-    <!-- :key is crucial for Vue's performance and is set to a unique value -->
-    <article v-for="card in cards" :key="card.image" class="info-card">
-      <div class="card-image-wrapper">
-        <NuxtPicture :src="card.image" :alt="card.alt" class="card-image" />
-      </div>
-      <div class="card-content">
-        <p>{{ card.text }}</p>
-      </div>
-    </article>
+  <div class="wrapper bg-amber-50">
+    <div class="card-grid-container">
+      <!-- We loop over the 'cards' array with v-for -->
+      <!-- :key is crucial for Vue's performance and is set to a unique value -->
+      <article v-for="card in cards" :key="card.image" class="info-card">
+        <div class="card-image-wrapper">
+          <NuxtImg :src="card.image" :alt="card.alt" class="card-image" />
+        </div>
+        <div class="card-content">
+          <p>{{ card.text }}</p>
+        </div>
+      </article>
+    </div>
   </div>
 </template>
 
@@ -52,6 +54,11 @@ const cards: Card[] = [
   Scoped styles mean these CSS rules will only apply to this component,
   preventing conflicts with other styles in your project.
 */
+
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
 
 .card-grid-container {
   display: grid;
@@ -66,7 +73,7 @@ const cards: Card[] = [
   gap: 2rem; /* Space between the cards */
   padding: 2rem;
   max-width: 1440px;
-  margin: 6rem auto 0; /* Center the grid container */
+  margin: 2rem auto 0; /* Center the grid container */
 }
 
 .info-card {
