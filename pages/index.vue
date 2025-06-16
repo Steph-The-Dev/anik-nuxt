@@ -1,5 +1,8 @@
 <template>
-  <IndexHero />
+  <div>
+    <IndexHero />
+    <InfoCards />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
